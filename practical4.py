@@ -85,11 +85,6 @@ def train():
         result = cv2.warpPerspective(original_image_left, H, (width, height))
         result[0:original_image_right.shape[0], 0:original_image_right.shape[1]] = original_image_right
 
-        plt.figure(figsize=(20,10))
-        plt.imshow(result)
-
-        plt.axis('off')
-        plt.show()
         label = "✵Apply panorama correction✵" 
         st.image(result, caption=label)
 
@@ -112,10 +107,7 @@ def train():
         # crop the image to the bbox coordinates
         result = result[y:y + h, x:x + w]
 
-        # show the cropped image
-        plt.figure(figsize=(20,10))
-        plt.imshow(result)
-
+ 
 
         label = "✵Final Image✵" 
         st.image(result, caption=label)
