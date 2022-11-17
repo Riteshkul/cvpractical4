@@ -34,7 +34,7 @@ def train():
         # Transform it to RGB to be compatible to matplotlib
         queryImg_gray = cv2.cvtColor(original_image_right, cv2.COLOR_RGB2GRAY)
 
-        fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, constrained_layout=False, figsize=(16,9))
+        
         label = "✵Query image✵" 
         st.image(original_image_right, caption=label)
 
